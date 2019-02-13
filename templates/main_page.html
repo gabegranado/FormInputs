@@ -8,25 +8,33 @@
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <!--<script src="../static/js/bootstrap.min.js"></script>-->
     <!--<script src="../static/js/jquery-3.3.1.slim.min.js"></script>-->
-    <script src="../static/js/quarry.min.js"></script>
+    <!--<script src="../static/js/quarry.min.js"></script>-->
   </head>
   <body>
 
     <div id="banner" class="container">
-      <h1 class="display-4">wiki</h1>
+      <h1 class="display-4"></h1>
     </div>
-    <div id="putUp"> </div>
+    <!--<div id="putUp"> </div>-->
     <!--<div class="container">-->
     <!--  {% if input_data %} {{ input_data }} {% endif %}-->
     <!--  <br />-->
     <!--  {% if output %} {{ output }} {% endif %}-->
     <!--</div>-->
-    <div class="container">
-      <!--<form action="{{ url_for('process_inputs') }}" method="post" >-->
-        <div class="form-group">
-          <textarea class="form-control" name="input_freeform" id="input_freeform" ></textarea>
-        </div>
-<button id="clc" onclick="saveInput()">Click</button>
+        <div class="container">
+
+            {% for comment in comments %}
+                <div class="row">
+                    {{ comment.content }}
+                </div>
+            {% endfor %}
+
+            <div class="row">
+                <form action="." method="POST">
+                    <textarea id ="textAreaComments" class="form-control" name="contents" placeholder="Enter a comment"></textarea>
+                    <input type="submit" class="btn btn-success" value="Post comment">
+                </form>
+            </div>
       </form>
     </div>
   </body>

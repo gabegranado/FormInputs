@@ -64,7 +64,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    text-align: left;
+    text-align: left, bottom;
     background-color: #fff
 }
 
@@ -1737,7 +1737,7 @@ pre code {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 500%;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;

@@ -1,7 +1,12 @@
 h1 {
-      text-align: center;
+      text-align: right;
 }
 
 div#banner.container {
      padding-top: 50px;
 }
+
+/*#textAreaComment(*/
+/*    width:1000px;*/
+/*    height:540px;*/
+/*)*/
